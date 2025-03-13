@@ -55,8 +55,6 @@ jdbc:postgresql://127.0.0.1:5432/|mydb|postgres|password|users|C:\path\to\your\f
 
 Sous **Windows** ou **Linux**, vous pouvez exécuter le programme en utilisant la commande suivante.
 
-### Sous Windows :
-
 1. Ouvrez une invite de commande.
 2. Accédez au répertoire contenant le fichier JAR (répertoire target par défaut).
 3. Exécutez la commande suivante :
@@ -110,7 +108,7 @@ CREATE TABLE users (
 ### Exemple de sortie de la console
 
 ```
-Veuillez entrer les informations suivantes séparées par un pipe(|) :
+Informations à fournir séparées par un pipe(|) :
 DB_URL|DB_NAME|DB_USER|DB_PASSWORD|TABLE_NAME|FILE_PATH
 Fichier à importer: C:\path\to\your\file.xlsx
 Base de données:[
@@ -121,7 +119,7 @@ USER: postgres
 Début de l'importation des données...
 Import terminé avec succès !
 Nombre de lignes insérées : 100
-Temps d'exécution : 1500 ms, 1 sec, 0.0 min
+Temps d'exécution : 15000 ms, 15 sec, 0.15 min
 ```
 
 ## Erreurs courantes
