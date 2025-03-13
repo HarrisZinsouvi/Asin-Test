@@ -7,7 +7,7 @@ Cette application permet d'importer des données depuis un fichier Excel (`.xlsx
 
 ## Prérequis
 
-Avant d'utiliser l'application, assurez-vous d'avoir installé les prérequis suivants :
+Avant d'utiliser l'application, assurez-vous d'avoir les prérequis suivants :
 
 - Java 17 ou supérieur
 - Maven installé pour la compilation du projet
