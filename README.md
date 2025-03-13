@@ -28,6 +28,7 @@ Si nécessaire, compilez le projet avec Maven.
 ```bash
 mvn clean package
 ```
+Le jar généré (embarquant toutes les librairies utiles) après compilation se trouve dans le dossier target ()
 ## Utilisation
 
 ### Format de l'entrée
@@ -48,19 +49,19 @@ DB_URL|DB_NAME|DB_USER|DB_PASSWORD|TABLE_NAME|FILE_PATH
 ### Exemple d'entrée :
 
 ```
-jdbc:postgresql://127.0.0.1:5432/|mydb|postgres|password|users|C:\path\to\your\file.xlsx
+jdbc:postgresql://127.0.0.1:5432/|mydb|postgres|password|people|C:\path\to\your\file.xlsx
 ```
 
 ### Lancer l'application
 
-Sous **Windows** ou **Linux**, vous pouvez exécuter le programme en utilisant la commande suivante.
+Sous **Windows**, **Linux**, ou **Mac os** vous pouvez exécuter le programme en utilisant la commande suivante.
 
 1. Ouvrez une invite de commande.
-2. Accédez au répertoire contenant le fichier JAR (répertoire courant par défaut).
+2. Accédez au répertoire contenant le fichier JAR (répertoire courant par défaut ou dossier target après un build maven).
 3. Exécutez la commande suivante :
 
 ```bash
-echo "jdbc:postgresql://127.0.0.1:5432/|mydb|postgres|password|users|C:\path\to\your\file.xlsx" | java -jar importexcel-1.0.jar
+echo "jdbc:postgresql://127.0.0.1:5432/|mydb|postgres|password|people|C:\path\to\your\file.xlsx" | java -jar importexcel-1.0.jar
 ```
 
 ### Ou plus simplement
@@ -72,7 +73,7 @@ java -jar importexcel-1.0.jar
 jdbc:postgresql://127.0.0.1:5432/|asin_test|postgres|root|people|D:\ALT_WORK\PROJET_ASIN\people sample.xlsx 
 ```
 
-### Explication de la commande
+### Détails sur la commande
 
 - La commande **echo** envoie les informations de connexion à la base de données et le chemin du fichier Excel à l'application.
 - `java -jar importexcel-1.0.jar` exécute le fichier JAR compilé de l'application.
@@ -91,7 +92,7 @@ L'application suppose que la table dans la base de données existe déjà. La ta
 Voici un exemple de création de table PostgreSQL :
 
 ```sql
-CREATE TABLE users (
+CREATE TABLE people (
     matricule VARCHAR(50),
     nom VARCHAR(100),
     prenom VARCHAR(100),
