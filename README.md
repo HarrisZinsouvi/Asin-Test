@@ -56,7 +56,7 @@ jdbc:postgresql://127.0.0.1:5432/|mydb|postgres|password|users|C:\path\to\your\f
 Sous **Windows** ou **Linux**, vous pouvez exécuter le programme en utilisant la commande suivante.
 
 1. Ouvrez une invite de commande.
-2. Accédez au répertoire contenant le fichier JAR (répertoire target par défaut).
+2. Accédez au répertoire contenant le fichier JAR (répertoire courant par défaut).
 3. Exécutez la commande suivante :
 
 ```bash
@@ -138,7 +138,7 @@ yyyy/MM/dd
 - **Erreur de connexion à la base de données** : Vérifiez que les informations de connexion sont correctes et que la base de données est accessible.
 - **Erreur de lecture du fichier** : Vérifiez que le chemin de votre fichier est correct; il ne doit inclure les caractères **" ou '**
 
-## Capture d'écran:
+## Captures d'écran:
 
 Les captures de résultats se trouvent dans le dossier screenshoots
 
