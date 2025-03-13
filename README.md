@@ -21,20 +21,13 @@ Pour installer automatiquement les prérequis sous linux, vous pouvez lancer les
 
 ## Compilation du projet
 
-Si nécessaire, compilez le projet avec Maven ou Gradle.
+Si nécessaire, compilez le projet avec Maven.
 
 ### Avec Maven :
 
 ```bash
 mvn clean package
 ```
-
-### Avec Gradle :
-
-```bash
-gradle build
-```
-
 ## Utilisation
 
 ### Format de l'entrée
