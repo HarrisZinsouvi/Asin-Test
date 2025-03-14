@@ -40,7 +40,7 @@ public class ImportXlsxToDB {
 
             if (params.length < 6) {
                 System.err.println("Erreur: vous devez fournir tous les arguments requis!");
-                System.err.println("Syntaxe: DB_URL DB_NAME DB_USER DB_PASSWORD TABLE_NAME FILE_PATH");
+                System.err.println("Syntaxe: DB_URL|DB_NAME|DB_USER|DB_PASSWORD|TABLE_NAME|FILE_PATH");
                 return;
             }
 
