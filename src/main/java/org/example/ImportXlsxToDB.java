@@ -17,20 +17,17 @@ import java.sql.PreparedStatement;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class ImportXlsxToDB {
-    private static final List<DateTimeFormatter> FORMATTERS = List.of(
-            DateTimeFormatter.ofPattern("yyyy-MM-dd"),
+    private static final List<DateTimeFormatter> FORMATTERS = Arrays.asList(DateTimeFormatter.ofPattern("yyyy-MM-dd"),
             DateTimeFormatter.ofPattern("MM/dd/yyyy"),
             DateTimeFormatter.ofPattern("MM-dd-yyyy"),
             DateTimeFormatter.ofPattern("dd/MM/yyyy"),
             DateTimeFormatter.ofPattern("dd-MM-yyyy"),
-            DateTimeFormatter.ofPattern("yyyy/MM/dd")
-    );
-
-
+            DateTimeFormatter.ofPattern("yyyy/MM/dd"));
 
     public static void main(String[] args) {
         try {
@@ -138,10 +135,6 @@ public class ImportXlsxToDB {
                 return cell.getStringCellValue().trim();
 
             case NUMERIC:
-                if (DateUtil.isCellDateFormatted(cell)) {
-                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-                    return formatter.format(cell.getLocalDateTimeCellValue().toLocalDate());
-                }
                 return String.valueOf(cell.getNumericCellValue());
 
             case BOOLEAN:
